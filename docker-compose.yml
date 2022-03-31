@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  react:
+    build: ./botanik-browser
+    ports:
+      - "3000:3000"
+    depends_on:
+      - django
+  django:
+    build: ./botanik-voynich
+    ports:
+      - "8000:8000"
